@@ -1,5 +1,4 @@
-{% set version = '1.1-13' %}
-
+{% set version = '1.1-18-1' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,48 +9,53 @@ package:
 source:
   fn: lme4_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/lme4_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/lme4/lme4_{{ version }}.tar.gz
-  sha256: 5fa8b63d15882d153ee105d399b559dd942d97b2e6e7deae3802f41cc451448e
+    - {{ cran_mirror }}/src/contrib/lme4_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/lme4/lme4_{{ version }}.tar.gz
+  sha256: 982af02f33d40de88e3ec358eceec74576c8b839a526587760477e3495235905
 
 build:
+  merge_build_host: True  # [win]
   number: 0
   skip: true  # [win32]
-
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
+    - {{ compiler('c') }}        # [not win]
+    - {{ compiler('cxx') }}      # [not win]
+    - {{native}}toolchain        # [win]
+    - {{posix}}filesystem        # [win]
+    - {{posix}}make
+    - {{posix}}sed               # [win]
+    - {{posix}}coreutils         # [win]
+    - {{posix}}zip               # [win]
+  host:
     - r-base
     - r-mass
-    - r-matrix >=1.1.1
+    - r-matrix >=1.2_1
     - r-rcpp >=0.10.5
     - r-rcppeigen
     - r-lattice
     - r-minqa >=1.1.15
     - r-nlme >=3.1_123
     - r-nloptr >=1.0.4
-    - posix                # [win]
-    - {{native}}toolchain  # [win]
-    - gcc                  # [not win]
-
   run:
     - r-base
+    - {{native}}gcc-libs         # [win]
     - r-mass
-    - r-matrix >=1.1.1
+    - r-matrix >=1.2_1
     - r-rcpp >=0.10.5
     - r-rcppeigen
     - r-lattice
     - r-minqa >=1.1.15
     - r-nlme >=3.1_123
     - r-nloptr >=1.0.4
-    - libgcc  # [not win]
 
 test:
   commands:
-    - $R -e "library('lme4')"  # [not win]
+    - $R -e "library('lme4')"           # [not win]
     - "\"%R%\" -e \"library('lme4')\""  # [win]
 
 about:
@@ -62,8 +66,13 @@ about:
     are implemented using the 'Eigen' C++ library for numerical linear algebra and 'RcppEigen'
     "glue".
   license_family: GPL3
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
+  license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
 
 extra:
   recipe-maintainers:
     - johanneskoester
     - bgruening
+    - daler
+    - jdblischak
+    - cbrueffer
