@@ -61,10 +61,10 @@ test:
 about:
   home: https://github.com/lme4/lme4/ http://lme4.r-forge.r-project.org/
   license: GPL (>= 2)
-  summary: Fit linear and generalized linear mixed-effects models. The models and their components
+  summary: |
+    Fit linear and generalized linear mixed-effects models. The models and their components
     are represented using S4 classes and methods.  The core computational algorithms
-    are implemented using the 'Eigen' C++ library for numerical linear algebra and 'RcppEigen'
-    "glue".
+    are implemented using the 'Eigen' C++ library for numerical linear algebra and 'RcppEigen' "glue".
   license_family: GPL3
   license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'  # [unix]
   license_file: '{{ environ["PREFIX"] }}\R\share\licenses\GPL-3'  # [win]
