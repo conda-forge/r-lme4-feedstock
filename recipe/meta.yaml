@@ -59,7 +59,7 @@ test:
     - "\"%R%\" -e \"library('lme4')\""  # [win]
 
 about:
-  home: https://github.com/lme4/lme4/ http://lme4.r-forge.r-project.org/
+  home: https://github.com/lme4/lme4/ http://lme4.r-forge.r-project.org
   license: GPL (>= 2)
   summary: |
     Fit linear and generalized linear mixed-effects models. The models and their components
