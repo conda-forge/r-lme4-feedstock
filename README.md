@@ -1,13 +1,16 @@
 About r-lme4
 ============
 
-Home: https://github.com/lme4/lme4/ http://lme4.r-forge.r-project.org/
+Home: https://github.com/lme4/lme4/ http://lme4.r-forge.r-project.org
 
 Package license: GPL (>= 2)
 
 Feedstock license: BSD 3-Clause
 
-Summary: Fit linear and generalized linear mixed-effects models. The models and their components are represented using S4 classes and methods.  The core computational algorithms are implemented using the 'Eigen' C++ library for numerical linear algebra and 'RcppEigen' "glue".
+Summary: Fit linear and generalized linear mixed-effects models. The models and their components
+are represented using S4 classes and methods.  The core computational algorithms
+are implemented using the 'Eigen' C++ library for numerical linear algebra and 'RcppEigen' "glue".
+
 
 
 
