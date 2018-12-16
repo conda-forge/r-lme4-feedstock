@@ -1,16 +1,15 @@
 About r-lme4
 ============
 
-Home: https://github.com/lme4/lme4/ http://lme4.r-forge.r-project.org
+[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
+
+Home: https://github.com/lme4/lme4/
 
 Package license: GPL (>= 2)
 
 Feedstock license: BSD 3-Clause
 
-Summary: Fit linear and generalized linear mixed-effects models. The models and their components
-are represented using S4 classes and methods.  The core computational algorithms
-are implemented using the 'Eigen' C++ library for numerical linear algebra and 'RcppEigen' "glue".
-
+Summary: Fit linear and generalized linear mixed-effects models. The models and their components are represented using S4 classes and methods.  The core computational algorithms are implemented using the 'Eigen' C++ library for numerical linear algebra and 'RcppEigen' "glue".
 
 
 
@@ -107,3 +106,14 @@ In order to produce a uniquely identifiable distribution:
  * If the version of a package **is** being increased, please remember to return
    the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
    back to 0.
+
+Feedstock Maintainers
+=====================
+
+* [@bgruening](https://github.com/bgruening/)
+* [@cbrueffer](https://github.com/cbrueffer/)
+* [@daler](https://github.com/daler/)
+* [@dbast](https://github.com/dbast/)
+* [@jdblischak](https://github.com/jdblischak/)
+* [@johanneskoester](https://github.com/johanneskoester/)
+
