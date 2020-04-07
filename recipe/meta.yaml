@@ -33,7 +33,7 @@ requirements:
   host:
     - r-base
     - r-mass
-    - r-matrix >=1.2_1
+    - r-statmod
     - r-rcpp >=0.10.5
     - r-rcppeigen
     - r-boot
@@ -45,7 +45,7 @@ requirements:
     - r-base
     - {{native}}gcc-libs         # [win]
     - r-mass
-    - r-matrix >=1.2_1
+    - r-statmod
     - r-rcpp >=0.10.5
     - r-rcppeigen
     - r-boot
