@@ -1,4 +1,4 @@
-{% set version = "1.1-23" %}
+{% set version = "1.1-25" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/lme4_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/lme4/lme4_{{ version }}.tar.gz
-  sha256: 99d542b1f78fae33a64f1b8eec33b7a4532a8d82d2ac47bdb2838248f14c0262
+  sha256: e4da476c0c6160a1c5059fa4a739937322e63b46f18b44fd72b4580b0f53726f
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -62,8 +62,7 @@ test:
 about:
   home: https://github.com/lme4/lme4/
   license: GPL (>= 2)
-  summary: Fit linear and generalized linear mixed-effects models. The models and their components are represented using S4 classes and methods.  The core computational
-    algorithms are implemented using the 'Eigen' C++ library for numerical linear algebra and 'RcppEigen' "glue".
+  summary: Fit linear and generalized linear mixed-effects models. The models and their components are represented using S4 classes and methods.  The core computational algorithms are implemented using the 'Eigen' C++ library for numerical linear algebra and 'RcppEigen' "glue".
   license_family: GPL3
   license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
