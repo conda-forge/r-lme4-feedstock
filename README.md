@@ -3,7 +3,7 @@ About r-lme4
 
 Home: https://github.com/lme4/lme4/
 
-Package license: GPL (>= 2)
+Package license: GPL-2.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-lme4-feedstock/blob/master/LICENSE.txt)
 
