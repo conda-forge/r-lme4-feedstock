@@ -21,6 +21,16 @@ build:
 
 requirements:
   build:
+    - cross-r-base {{ r_base }}  # [build_platform != target_platform]
+    - r-minqa                    # [build_platform != target_platform]
+    - r-boot                     # [build_platform != target_platform]
+    - r-statmod                  # [build_platform != target_platform]
+    - r-nlme                     # [build_platform != target_platform]
+    - r-rcppeigen                # [build_platform != target_platform]
+    - r-lattice                  # [build_platform != target_platform]
+    - r-rcpp                     # [build_platform != target_platform]
+    - r-nloptr                   # [build_platform != target_platform]
+    - r-mass                     # [build_platform != target_platform]
     - {{ compiler('c') }}        # [not win]
     - {{ compiler('cxx') }}      # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
