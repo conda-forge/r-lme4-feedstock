@@ -3,6 +3,7 @@ About r-lme4-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-lme4-feedstock/blob/main/LICENSE.txt)
 
+
 About r-lme4
 ------------
 
@@ -11,6 +12,7 @@ Home: https://github.com/lme4/lme4/
 Package license: GPL-2.0-or-later
 
 Summary: Fit linear and generalized linear mixed-effects models. The models and their components are represented using S4 classes and methods.  The core computational algorithms are implemented using the 'Eigen' C++ library for numerical linear algebra and 'RcppEigen' "glue".
+
 About r-lme4
 ------------
 
