@@ -25,7 +25,7 @@ requirements:
     - r-boot                       # [build_platform != target_platform]
     - r-lattice                    # [build_platform != target_platform]
     - r-mass                       # [build_platform != target_platform]
-    - r-matrix                     # [build_platform != target_platform]
+    - r-matrix >=1.6_2             # [build_platform != target_platform]
     - r-minqa >=1.1.15             # [build_platform != target_platform]
     - r-nlme >=3.1_123             # [build_platform != target_platform]
     - r-nloptr >=1.0.4             # [build_platform != target_platform]
@@ -45,7 +45,9 @@ requirements:
     - r-boot
     - r-lattice
     - r-mass
-    - r-matrix
+    ## technically could be min r-matrix is 1.2_1
+    ## but <1.6_2 is ABI incompatible with >=1.6_2
+    - r-matrix >=1.6_2
     - r-minqa >=1.1.15
     - r-nlme >=3.1_123
     - r-nloptr >=1.0.4
@@ -57,7 +59,7 @@ requirements:
     - r-boot
     - r-lattice
     - r-mass
-    - r-matrix
+    - r-matrix >=1.6_2
     - r-minqa >=1.1.15
     - r-nlme >=3.1_123
     - r-nloptr >=1.0.4
