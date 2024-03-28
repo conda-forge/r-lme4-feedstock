@@ -1,4 +1,4 @@
-{% set version = "1.1-35.1" %}
+{% set version = "1.1-35.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/lme4_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/lme4/lme4_{{ version }}.tar.gz
-  sha256: e4a411396f68bf93751dfd01c8cd431e2d4658340186c47d164ebb2b840afb5b
+  sha256: ec46247c9bb4a512e9ee7526f5dafbfd8925bc23adbbe181874959adee9e7b5b
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
