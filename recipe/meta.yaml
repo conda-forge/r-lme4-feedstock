@@ -1,4 +1,4 @@
-{% set version = "1.1-35.3" %}
+{% set version = "1.1-35.5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/lme4_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/lme4/lme4_{{ version }}.tar.gz
-  sha256: b4875c127c6c3a74d74fd4894817858c482d8bcf72b63e48e84834e0293f4346
+  sha256: 7d6664db7ea96429562efe1058da58985d779d6fe79ec6f4e86ba68047135170
 
 build:
   merge_build_host: true  # [win]
@@ -32,8 +32,10 @@ requirements:
     - r-rcpp >=0.10.5              # [build_platform != target_platform]
     - r-rcppeigen >=0.3.3.9.4      # [build_platform != target_platform]
     - {{ compiler('c') }}          # [not win]
+    - {{ stdlib("c") }}            # [not win]
     - {{ compiler('cxx') }}        # [not win]
     - {{ compiler('m2w64_c') }}    # [win]
+    - {{ stdlib("m2w64_c") }}      # [win]
     - {{ compiler('m2w64_cxx') }}  # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
