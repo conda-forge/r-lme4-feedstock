@@ -1,4 +1,4 @@
-{% set version = "1.1-35.5" %}
+{% set version = "1.1-37" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/lme4_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/lme4/lme4_{{ version }}.tar.gz
-  sha256: 7d6664db7ea96429562efe1058da58985d779d6fe79ec6f4e86ba68047135170
+  sha256: cfdb756c445fdda069307945798dae1646557df2ed417ac06572eab47fbef00c
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
