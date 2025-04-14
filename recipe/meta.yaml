@@ -16,8 +16,6 @@ build:
   rpaths:
     - lib/R/lib/
     - lib/
-  run_exports:
-    - r-matrix
 
 requirements:
   build:
@@ -60,8 +58,7 @@ requirements:
     - r-boot
     - r-lattice
     - r-mass
-    # let run_exports define r-matrix version
-    # - r-matrix
+    - {{ pin_compatible('r-matrix', exact=True) }}
     - r-minqa >=1.1.15
     - r-nlme >=3.1_123
     - r-nloptr >=1.0.4
