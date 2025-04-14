@@ -44,6 +44,7 @@ requirements:
   host:
     - r-base
     - r-boot
+    - r-codetools
     - r-lattice
     - r-mass
     - r-matrix >=1.2_3
@@ -69,6 +70,7 @@ requirements:
 test:
   requires:
     - r-testthat
+    - r-codetools
   source_files:
     - tests/
   commands:
