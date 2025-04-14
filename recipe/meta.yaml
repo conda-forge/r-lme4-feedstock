@@ -16,6 +16,8 @@ build:
   rpaths:
     - lib/R/lib/
     - lib/
+  run_exports:
+    - r-matrix
 
 requirements:
   build:
@@ -23,12 +25,13 @@ requirements:
     - r-boot                       # [build_platform != target_platform]
     - r-lattice                    # [build_platform != target_platform]
     - r-mass                       # [build_platform != target_platform]
-    - r-matrix >=1.6_2             # [build_platform != target_platform]
+    - r-matrix >=1.2_3             # [build_platform != target_platform]
     - r-minqa >=1.1.15             # [build_platform != target_platform]
     - r-nlme >=3.1_123             # [build_platform != target_platform]
     - r-nloptr >=1.0.4             # [build_platform != target_platform]
     - r-rcpp >=0.10.5              # [build_platform != target_platform]
     - r-rcppeigen >=0.3.3.9.4      # [build_platform != target_platform]
+    - r-reformulas >=0.3.0         # [build_platform != target_platform]
     - {{ compiler('c') }}          # [not win]
     - {{ stdlib("c") }}            # [not win]
     - {{ compiler('cxx') }}        # [not win]
@@ -45,25 +48,26 @@ requirements:
     - r-boot
     - r-lattice
     - r-mass
-    ## technically could be min r-matrix is 1.2_1
-    ## but <1.6_2 is ABI incompatible with >=1.6_2
-    - r-matrix >=1.6_2
+    - r-matrix >=1.2_3
     - r-minqa >=1.1.15
     - r-nlme >=3.1_123
     - r-nloptr >=1.0.4
     - r-rcpp >=0.10.5
     - r-rcppeigen >=0.3.3.9.4
+    - r-reformulas >=0.3.0
   run:
     - r-base
     - r-boot
     - r-lattice
     - r-mass
-    - r-matrix >=1.6_2
+    # let run_exports define r-matrix version
+    # - r-matrix
     - r-minqa >=1.1.15
     - r-nlme >=3.1_123
     - r-nloptr >=1.0.4
     - r-rcpp >=0.10.5
     - r-rcppeigen >=0.3.3.9.4
+    - r-reformulas >=0.3.0
 
 test:
   requires:
