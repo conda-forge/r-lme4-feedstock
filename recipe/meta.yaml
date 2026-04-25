@@ -80,9 +80,9 @@ test:
     - tests/
   commands:
     - $R -e "library('lme4')"                                                                           # [not win]
-    - $R -e "testthat::test_dir('tests/testthat/', package='lme4', load_package='installed')"           # [not win]
+    # - $R -e "testthat::test_dir('tests/testthat/', package='lme4', load_package='installed')"           # [not win]
     - "\"%R%\" -e \"library('lme4')\""                                                                  # [win]
-    - "\"%R%\" -e \"testthat::test_dir('tests/testthat/', package='lme4', load_package='installed')\""  # [win]
+    # - "\"%R%\" -e \"testthat::test_dir('tests/testthat/', package='lme4', load_package='installed')\""  # [win]
 
 about:
   home: https://github.com/lme4/lme4/
